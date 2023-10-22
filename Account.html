@@ -1,0 +1,145 @@
+<html>
+      <head>
+          <title>Create Account</title>
+		  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+		  <style>
+		      body{
+			  background:url('https://image.shutterstock.com/image-photo/green-grass-field-blue-sky-260nw-1722343828.jpg')no-repeat;
+			  background-size:cover;
+			  }
+			  .container{
+			  height:87.5vh;
+			  width:28%;
+			  background:rgba(0,0,0,0.6);
+			  position:absolute;
+			  top:52%;
+			  left:50%;
+			  transform:translate(-50%,-50%);
+			  padding:0px 20px;
+			  }
+			  .container h1{
+			  margin-top:15%;
+			  margin-left:3%;
+			  font-family:sans-serif;
+			  }
+			  .container p{
+			  font-family:sans-serif;
+			  font-weight:bold;
+			  color:#fff;
+			  }
+			  input{
+			  width:100%;
+			  margin-bottom:20px;
+			  }
+			  input[type="text"],
+			  input[type="password"]{
+			  border:none;
+			  border-bottom:1px solid #fff;
+			  background:transparent;
+			  outline:none;
+			  height:40px;
+			  color:#fff;
+			  font-size:16px;
+			  }
+			  ::placeholder{
+			  color:rgba(255,255,255,0.5);
+			  }
+			  input[type="submit"]{
+			  border:none;
+			  outline:none;
+			  height:40px;
+			  font-size:23px;
+			  font-weight:bold;
+			  font-family:cambria;
+			  cursor:pointer;
+			  border-radius:20px;
+			  }
+			  .img{
+			  height:70px;
+			  width:70px;
+			  background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSie_CQKKgbbkDhj1w1Q7lCjz419kSXx_5Tcg&usqp=CAU')no-repeat;
+			  background-size:cover;
+			  border-radius:50px;
+			  position:absolute;
+			  top:0%;
+			  left:50%;
+			  transform:translate(-50%,-50%);
+			  }
+			  .with1{
+	margin-top:8px;
+	text-align:center;
+	font-family:cambria;
+	font-size:23px;
+	color:#04AFF0;
+}
+.member{
+	text-align:center;
+	font-family:cambria;
+	font-size:18px;
+	margin-top:10px;
+	font-weight:bold;
+}
+.member a{
+	text-decoration:none;
+	color:#04AFF0;
+}
+.links{
+	display:flex;
+}
+.facebook,.google{
+	height:40px;
+	width:100%;
+	border:1px solid silver;
+	border-radius:3px;
+	margin:25 10px;
+	transition:.2s;
+	}
+.facebook:hover{
+	border:4px solid #05BDD0;
+	cursor:pointer;
+}
+.google:hover{
+    border:4px solid #05BDD0;
+	cursor:pointer;
+}
+.facebook i,.facebook span{
+	color:blue;
+}
+.google i,.google span{
+	color:red;
+}
+.links i{
+	font-size:23px;
+	line-height:40px;
+	margin-left:20px;
+}
+.links span{
+	position:absolute;
+	font-size:20px;
+	font-weight:bold;
+	padding-left:13px;
+	font-family:sans-serif;
+}
+			  
+		  </style>
+		</head>
+		<body>
+		    <div class="container">
+		       <h1>Login to your account</h1>
+			   <div class="img"></div>
+			   <form>
+			      <p>Email</p>
+				  <input type="text" placeholder="Enter your E-Mail" required>
+				  <p>Password</p>
+				  <input type="password" placeholder="Enter Password" required>
+				  <input type="submit" value="Login">
+				  <div class="with1">or login with</div>
+			    <div class="links">
+                   <div class="facebook"><i class="fab fa-facebook-square"><span>Facebook</span></i></div>
+                   <div class="google"><i class="fab fa-google-plus-square"><span>Google</span></i></div>
+                </div>
+		        <div class="member">Not a member?<a href="#">Signup now</a></div>
+			   </form>
+			</div>
+	   </body>
+</html>

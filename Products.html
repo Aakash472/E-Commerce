@@ -1,0 +1,800 @@
+<html>
+		<head>
+			<title>All Products-"Golden Goods"</title>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<style>
+				body{
+				font-family:Tahoma;
+				}
+				/*------------Header-----------------*/
+				.container{
+				width:1300px;
+				margin:auto;
+				padding-left:25px;
+				padding-right:25px;
+				background:radial-gradient(#fff,#ffd6d6);
+				}
+				.navbar img{
+				width:125px;
+				}
+				.navbar{
+				display:flex;
+				align-items:center;
+				padding:20px;
+				}
+				nav{
+				flex:1;
+				text-align:right;
+				}
+				nav ul{
+				font-size:23px;
+				display:inline-block;
+				list-style-type:none;
+				}
+				nav ul li{
+				display:inline-block;
+				margin-right:20px;
+				}
+				nav ul li:hover{
+				background-color:#E887BB;
+				text-shadow:1px 2px;
+				border-radius:8px;
+				border-style:double;
+				border-color:#0C8319;
+				}
+				a{
+				text-decoration:none;
+				color:#555;
+				}
+				
+				/*----------------------Products & Option Value--------------------*/
+				.row{
+				display:flex;
+				}
+				.coco select{
+				display:inline-block;
+				margin-top:65px;
+				margin-left:1110px;
+				margin-bottom:35px;
+				font-size:20px;
+				cursor:pointer;
+				border:2px solid red;
+				}
+				
+				/*--------------------Product Images-------------------*/
+				.container2{
+				max-width:1080px;
+				margin:auto;
+				padding-left:25px;
+				padding-right:25px;
+				}
+				.col-1{
+				flex-basis:25%;
+				padding:10px;
+				min-width:200px;
+				margin-bottom:50px;
+				transition:transform 0.5s;
+				margin-right:7px;
+				margin-left:7px;
+				background:#EAEDED;
+				}
+				.col-1 img{
+				width:100%;
+				}
+				.col-1:hover{
+				transform:translateY(-10px);
+				box-shadow: 4px 4px 3px 3px rgba(0,0,0,0.2);
+				}
+				.rating .fa{
+				color:#ff523b;
+				}
+				
+				.title{
+				position:absolute;
+				line-height:45px;
+				color:#555;
+				margin-left:50px;
+				margin-top:50px;
+				}
+				.title::after{
+				content:"";
+				background:#ff523b;
+				width:80px;
+				height:5px;
+				border-radius:5px;
+				position:absolute;
+				bottom:0;
+				left:50%;
+				transform:translateX(-50%);
+				}
+				.foot{
+				background:#8FBD80;
+				color:#FAFABE;
+				padding-top:10px;
+				padding-bottom:10px;
+				cursor:pointer;
+				text-align:center;
+				margin-bottom:8px;
+				margin-top:35px;
+				}
+				.foot:hover{
+				background-color:#659152;
+				}
+				.foot1{
+				background:#F6906E;
+				color:#FAFABE;
+				padding-top:10px;
+				padding-bottom:10px;
+				cursor:pointer;
+				text-align:center;
+				}
+				.foot1:hover{
+				background-color:#9F7155;
+				}
+				/*----------------------FOOTER SECTION----------------*/
+				footer{
+				position:relative;
+				width:auto;height:auto;
+				padding:50px 100px;
+				background:#111;
+				display:flex;
+				justify-content:space-between;
+				flex-wrap:wrap;
+				}
+				footer .container3{
+				display:flex;
+				justify-content:space-between;
+				flex-wrap:wrap;
+				flex-direction:row;
+				}
+				footer .container3 .aboutus{
+				margin-right:30px;
+				width:40%;
+				}
+				footer  h2{
+				position:relative;
+				color:#fff;
+				font-weight:500;
+				margin-bottom:15px;
+				}
+				footer  h2:before{
+				content:'';
+				position:absolute;
+				bottom:-5px;
+				left:0;
+				width:50px;
+				height:2px;
+				background:#f00;
+				}
+				footer p{
+				color:#999;
+				}
+				.sci{
+				margin-top:20px;
+				display:flex;
+				}
+				.sci li{
+				list-style:none;
+				}
+				.sci li a{
+				display:inline-block;
+				width:40px;
+				height:40px;
+				background:#222;
+				display:flex;
+				justify-content:center;
+				align-items:center;
+				margin-right:10px;
+				text-decoration:none;
+				border-radius:4px;
+				}
+				.sci li a:hover{
+				background:#f00;
+				}
+				.sci li a .fa{
+				color:#fff;
+				font-size:20px;
+				}
+				.quicklinks{
+				position:relative;
+				width:25%;
+				}
+				.quicklinks ul li{
+				list-style:none;
+				}
+				.quicklinks ul li a{
+				color:#999;
+				text-decoration:none;
+				margin-bottom:10px;
+				display:inline-block;
+				}
+				.quicklinks ul li a:hover{
+				color:#fff;
+				}
+				.contact .info li{
+				display:flex;
+				margin-bottom:16px;
+				}
+				.contact .info li span:nth-child(1){
+				color:#fff;
+				font-size:20px;
+				margin-right:10px;
+				}
+				span{
+				color:#999;
+				}
+				
+			    /*-----------------ARROW FOR MOVING IMAGES---------------*/
+				.col-2{
+				font-size:65px;
+				margin-top:20%;
+				}
+				.prev{
+				margin-right:25px;
+				cursor:pointer;
+				color:#7CA2A1;
+				}
+				.next{
+				margin-left:25px;
+				cursor:pointer;
+				color:#7E8383;
+				}
+				
+				.foot2{
+				background:#E6E318;
+				color:#777A79;
+				font-weight:bold;
+				padding-top:10px;
+				padding-bottom:10px;
+				cursor:not-allowed;
+				text-align:center;
+				}
+				.foot2:hover{
+				background-color:#CCCD62;
+				color:#626234;
+				}
+			</style>
+		</head>
+		<body>
+			<div class="container">
+		      <div class="navbar">
+			      <img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\Golden.jpg">   <!----LOGO---->
+				  <nav>
+			          <ul>                                               <!----HYPERLINKS BUTTON---->
+				          <li><a href="Index1.html">Home</a>
+					      <li><a href="Products.html">Products</a>
+					      <li><a href="aboutus.html">About</a>
+					      <li><a href="Contact1.html">Contact</a>
+					      <li><a href="Account.html">Account</a>
+						  <li><a href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+				      </ul>
+			       </nav>
+			  </div>
+			</div>
+			
+			<!--------------------ALL PRODUCTS--------------------->
+			
+			<div class="small-container">
+				<div class="row">
+					<h2 class="title">All Products</h2>
+					<div class="coco">
+					<select>
+						<option>Default Sorting</option>
+						<option>Sort by Prices</option>
+						<option>Sort by Popularity</option>
+						<option>Sort by Rating</option>
+						<option>Sort by Sale</option>
+					</select>
+					</div>
+				</div>
+			</div>
+			<div class="container2">
+				<div class="row">
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img7.jpg">
+						<h4>Xiaomi Redmi Note 9 Pro Max</h4>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-o"></i>
+						</div>
+						<p>$147.00</p>
+						<div class="foot">Buy Now</div>
+						<div class="foot1">Add to Cart</div>
+					</div>
+					
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img3.jpg">
+						<h4>HMTe HM-9072 Watch</h4>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-o"></i>
+						</div>
+						<p>$55.00</p>
+						<div class="foot">Buy Now</div>
+						<div class="foot1">Add to Cart</div>
+					</div>
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img12.jpeg">
+						<h4>Silver Shine Golden Necklace</h4>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-o"></i>
+						</div>
+						<p>$375.00</p>
+						<div class="foot">Buy Now</div>
+						<div class="foot1">Add to Cart</div>
+					</div>
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img9.jpeg">
+						<h4>Hangup Maroon Silk Kurta</h4>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-o"></i>
+							<i class="fa fa-star-o"></i>
+						</div>
+						<p>$95.00</p>
+						<div class="foot">Buy Now</div>
+						<div class="foot1">Add to Cart</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img10.jpeg">
+						<h4>Frionkandy Cotton Flare Dress</h4>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-o"></i>
+						</div>
+						<p>$75.00</p>
+						<div class="foot">Buy Now</div>
+						<div class="foot1">Add to Cart</div>
+					</div>
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img11.jpg">
+						<h4>Shoevik Sneakers Casual Shoes</h4>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-o"></i>
+						</div>
+						<p>$135.00</p>
+						<div class="foot">Buy Now</div>
+						<div class="foot1">Add to Cart</div>
+					</div>
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img8.jpeg">
+						<h4>SIDKRT Cotton Black T-Shirt</h4>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-o"></i>
+						</div>
+						<p>$70.00</p>
+						<div class="foot">Buy Now</div>
+						<div class="foot1">Add to Cart</div>
+					</div>
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img13.jpg">
+						<h4>Gazal Fashions Silk Saree</h4>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+						<p>$80.00</p>
+						<div class="foot">Buy Now</div>
+						<div class="foot1">Add to Cart</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--------------------RECENT SEARCH--------------------->
+			
+			<h2 class="title">Recent Search</h2>
+			<div class="container2">
+				<div class="row" style="margin-top:120px;">
+					<div class="col-2">
+						<a class="prev">&#10094;</a>
+					</div>
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img31.jpg">
+						<h4>Ethnic Yard Pink Net Semi Stitched Lehenga</h4>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-o"></i>
+						</div>
+						<p>$1499.00</p>
+						<div class="foot" style="margin-top:108px;">Buy Now</div>
+						<div class="foot1">Add to Cart</div>
+					</div>
+					
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img35.jpeg">
+						<h4>Celosia Net Baby Doll Dresses</h4>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div><br>
+						<del style="color:#807E7E;">$659.00</del><span style="margin-left:12px;color:#918E8D;">(Inclusive of all taxes)</span>
+						<p style="color:#ED5E4A;font-size:23px;">$255.00<span style="border:2px solid #535E64;margin-left:12px;padding:3px;color:#9E746B">47% OFF</span></p>
+						<div class="foot">Buy Now</div>
+						<div class="foot1">Add to Cart</div>
+					</div>
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img33.jpeg">
+						<h4>ADIMA Cotton Black T-Shirts</h4>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-o"></i>
+						</div>
+						<p>$989.00</p>
+						<div class="foot" style="margin-top:108px;">Buy Now</div>
+						<div class="foot1">Add to Cart</div>
+					</div>
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img34.jpg">
+						<h4>PKKART Beige Flats</h4>
+						<div class="rating" style="margin-top:40px;">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-o"></i>
+						</div><br>
+						<del style="color:#807E7E;">$1498.00</del><span style="margin-left:12px;color:#918E8D;">(Inclusive of all taxes)</span>
+						<p style="color:#ED5E4A;font-size:23px;">$548.00<span style="border:2px solid #535E64;margin-left:12px;padding:3px;color:#9E746B">90% OFF</span></p>
+						<div class="foot">Buy Now</div>
+						<div class="foot1">Add to Cart</div>
+					</div>
+					<div class="col-2">
+						<a class="next">&#10095;</a>
+					</div>
+				</div>
+			</div>
+			
+			<!---------------------TRENDING SEARCHES-------------------->
+			
+			<h2 class="title">Trending Searches</h2>
+			<div class="container2">
+				<div class="row" style="margin-top:120px;">
+					<div class="col-2">
+						<a class="prev">&#10094;</a>
+					</div>
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img23.jpeg">
+						<h4>Sneakers Casual Shoes</h4>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-o"></i>
+						</div>
+						<p>$475.00</p>
+						<div class="foot">Buy Now</div>
+						<div class="foot1">Add to Cart</div>
+					</div>
+					
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img24.jpg">
+						<h4>Arizona Sunglasses</h4>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-o"></i>
+							<i class="fa fa-star-o"></i>
+						</div>
+						<p>$755.00</p>
+						<div class="foot">Buy Now</div>
+						<div class="foot1">Add to Cart</div>
+					</div>
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img25.jpg">
+						<h4>AKS Cotton Black</h4>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-o"></i>
+							<i class="fa fa-star-o"></i>
+							<i class="fa fa-star-o"></i>
+						</div>
+						<p>$595.00</p>
+						<div class="foot">Buy Now</div>
+						<div class="foot1">Add to Cart</div>
+					</div>
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img26.jpg">
+						<h4>Green Rayon Kurti</h4>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+						<p>$1695.00</p>
+						<div class="foot">Buy Now</div>
+						<div class="foot1">Add to Cart</div>
+					</div>
+					<div class="col-2">
+						<a class="next">&#10095;</a>
+					</div>
+				</div>
+			</div>
+			
+			<!---------------------RELATED OFFERS--------------------->
+			
+			<h2 class="title">Related offer</h2>
+			<div class="container2">
+				<div class="row" style="margin-top:120px;">
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img15.jpg">
+						<h4>Gritstones Cotton Multi Shirt</h4>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-o"></i>
+						</div><br>
+						<del style="color:#807E7E;">$755.00</del><span style="margin-left:12px;color:#918E8D;">(Inclusive of all taxes)</span>
+						<p style="color:#ED5E4A;font-size:23px;">$299.00<span style="border:2px solid #535E64;margin-left:12px;padding:3px;color:#9E746B">52% OFF</span></p>
+						<div class="foot">Buy Now</div>
+						<div class="foot1">Add to Cart</div>
+					</div>
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img16.jpeg">
+						<h4>Sneakers Blue Casual Shoes</h4>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-o"></i>
+						</div><br>
+						<del style="color:#807E7E;">$475.00</del><span style="margin-left:12px;color:#918E8D;">(Inclusive of all taxes)</span>
+						<p style="color:#ED5E4A;font-size:23px;">$75.00<span style="border:2px solid #535E64;margin-left:12px;padding:3px;color:#9E746B">92% OFF</span></p>
+						<div class="foot">Buy Now</div>
+						<div class="foot1">Add to Cart</div>
+					</div>
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img17.jpg">
+						<h4>Couture Silk Blue Dress</h4>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div><br>
+						<del style="color:#807E7E;">$945.00</del><span style="margin-left:12px;color:#918E8D;">(Inclusive of all taxes)</span>
+						<p style="color:#ED5E4A;font-size:23px;">$498.00<span style="border:2px solid #535E64;margin-left:12px;padding:3px;color:#9E746B">58% OFF</span></p>
+					    <div class="foot">Buy Now</div>
+						<div class="foot1">Add to Cart</div>
+					</div>
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img18.jpeg">
+						<h4>Realme C11</h4>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-o"></i>
+						</div><br>
+						<del style="color:#807E7E;">$3445.00</del><span style="margin-left:12px;color:#918E8D;">(Inclusive of all taxes)</span>
+						<p style="color:#ED5E4A;font-size:23px;">$1185.00<span style="border:2px solid #535E64;margin-left:12px;padding:3px;color:#9E746B">25% OFF</span></p>
+					    <div class="foot">Buy Now</div>
+						<div class="foot1">Add to Cart</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img19.jpeg">
+						<h4>Brown Silk Saree</h4>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-o"></i>
+						</div><br>
+						<del style="color:#807E7E;">$2090.00</del><span style="margin-left:12px;color:#918E8D;">(Inclusive of all taxes)</span>
+						<p style="color:#ED5E4A;font-size:23px;">$170.00<span style="border:2px solid #535E64;margin-left:12px;padding:3px;color:#9E746B">86% OFF</span></p>
+						<div class="foot">Buy Now</div>
+						<div class="foot1">Add to Cart</div>
+					</div>
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img20.jpg">
+						<h4>Gritstones Black Cotton T-Shirt</h4>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-o"></i>
+							<i class="fa fa-star-o"></i>
+						</div><br>
+						<del style="color:#807E7E;">$99.00</del><span style="margin-left:12px;color:#918E8D;">(Inclusive of all taxes)</span>
+						<p style="color:#ED5E4A;font-size:23px;">$69.00<span style="border:2px solid #535E64;margin-left:12px;padding:3px;color:#9E746B">20% OFF</span></p>
+					    <div class="foot">Buy Now</div>
+						<div class="foot1">Add to Cart</div>
+					</div>
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img21.jpg">
+						<h4>SEEVO Double Cotton Bedding Set</h4>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-o"></i>
+							<i class="fa fa-star-o"></i>
+						</div><br>
+						<del style="color:#807E7E;">$1275.00</del><span style="margin-left:12px;color:#918E8D;">(Inclusive of all taxes)</span>
+						<p style="color:#ED5E4A;font-size:23px;">$655.00<span style="border:2px solid #535E64;margin-left:12px;padding:3px;color:#9E746B">50% OFF</span></p>
+					    <div class="foot">Buy Now</div>
+						<div class="foot1">Add to Cart</div>
+					</div>
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img22.jpeg">
+						<h4>Leeport Oxford Formal Shoes</h4>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-o"></i>
+							<i class="fa fa-star-o"></i>
+						</div><br>
+						<del style="color:#807E7E;">$452.00</del><span style="margin-left:12px;color:#918E8D;">(Inclusive of all taxes)</span>
+						<p style="color:#ED5E4A;font-size:23px;">$198.00<span style="border:2px solid #535E64;margin-left:12px;padding:3px;color:#9E746B">69% OFF</span></p>
+					    <div class="foot">Buy Now</div>
+						<div class="foot1">Add to Cart</div>
+					</div>
+				</div>
+			</div>
+			
+			<!----------------------UPCOMING PRODUCTS------------------->
+			
+			<h2 class="title">Upcoming Products</h2>
+			<div class="container2">
+				<div class="row" style="margin-top:120px;">
+					<div class="col-2">
+						<a class="prev">&#10094;</a>
+					</div>
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img27.jpeg">
+						<h4>Godrej blue refrigerator 190</h4>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-o"></i>
+							<i class="fa fa-star-o"></i>
+						</div>
+						<p>$795.00</p>
+						<div class="foot2">Coming Soon</div>
+					</div>
+					
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img28.jpg">
+						<h4>Havells HD3251 Hair Dryer</h4>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-half-o"></i>
+						</div>
+						<p>$970.00</p>
+						<div class="foot2">Coming Soon</div>
+					</div>
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img29.jpg">
+						<h4>Swayam Shades Single Comforter</h4>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star-o"></i>
+						</div>
+						<p>$1599.00</p>
+						<div class="foot2">Coming Soon</div>
+					</div>
+					<div class="col-1">
+						<img src="C:\Users\admin\Desktop\My Projects\E-Commerce\Images\img30.jpg">
+						<h4>ZONFAB Red Georgette Semi-Stitched Suit</h4>
+						<div class="rating">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+						<p>$1895.00</p>
+						<div class="foot2">Coming Soon</div>
+					</div>
+					<div class="col-2">
+						<a class="next">&#10095;</a>
+					</div>
+				</div>
+			</div>
+			
+			<!-----------------------FOOTER SECTION-------------------->
+			
+			<footer>
+		       <div class="container3">
+			       <div class="aboutus">
+				      <h2>About Us</h2>
+					  <p>This is the e-commerce arm of Future Group, who are famous for their offline stores such as Big Bazaar, eZone, 
+					  Pantaloons among other things. Thanks to this background, <b><u><i>Goldengoods</i></u></b> has a wide range of main categories, with
+					  detailed sub-categories.</p>
+					  <ul class="sci">
+					      <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						  <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						  <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+						  <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+					  </ul>
+				   </div>
+				   <div class="quicklinks">
+				      <h2>Quick Links</h2>
+					  <ul>
+					      <li><a href="#">About</a></li>
+						  <li><a href="#">FAQ</a></li>
+						  <li><a href="#">Privacy Policy</a></li>
+						  <li><a href="#">Help</a></li>
+						  <li><a href="#">Terms & Condition</a></li>
+						  <li><a href="#">Contact</a></li>
+					  </ul>
+				   </div>
+				   <div class="contact">
+				       <h2>Contact-Info</h2>
+					   <ul class="info">
+					      <li>
+						      <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+							  <span>Linda street</span>
+						  </li>
+						  <li>
+						      <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+							  <p><a href="#">+1 234 567 8900</a><br>
+							    <a href="#">+1 234 567 8900</a></p>
+						  </li>
+						  <li>
+						      <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+							  <p><a href="#">Malldelivery678@gmail.com</a></p>
+						  </li>
+					   </ul>
+				   </div>
+			   </div>
+	       </footer>
+		</body>
+</html>
